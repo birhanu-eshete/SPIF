@@ -1,6 +1,6 @@
 #SPIF-Sensitive and Private Information Filterer
 
-![picture alt](/logos/logo001.png "")  
+![picture alt](/logos/logo01.png "")  
 
 A tool for filtering open data for private/sensitive information before publication
 
@@ -16,10 +16,17 @@ The problem statement is at - http://www.rhok.org/problems/ffilter-tool-screenin
 - firters Telephone Numbers
 - filters Bank Account Numbers
 
-##Requirements
+##Requirements/Dependencies
 
-- Python 2.7
+- Python 2.7 - http://www.python.org/
 - OpenPyXL library - http://packages.python.org/openpyxl/
+- PyPDF - http://pybrary.net/pyPdf/
+
+##Operating System
+
+We tested this script on:
+- MacOs 10.6.4 
+- Ubuntu 12.10 LTS
 
 ##Usage
 
@@ -32,4 +39,4 @@ Birhanu Eshete - birhanu.mekuria(at)gmail.com
 Ali Fawzi Najm Al-Shammari - afnfun(at)yahoo.com 
 Michele Fogarolli - michelefoga(at)gmail.com
 
-##Credits
+
