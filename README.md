@@ -39,13 +39,13 @@ We tested this script on:
 
 ##Usage
 - Command Line Mode
-<code>python spif.py filename.ext</code>
--GUI Mode
- <code>python main.py </code>
-##Known issues
+	<code>python spif.py filename.ext</code>
+- GUI Mode
+ 	<code>python main.py </code>
+##Known Issues
 
-Not all pdf files are supported by PyPdf library, do not get surprised if the script is selective on pdf files as the conversion scheme matters. 
-Docx conversion does not give the page number where a sensitive or private information is found. So it is a little course-grained.
+- Not all pdf files are supported by PyPdf library, do not get surprised if the script is selective on pdf files as the conversion scheme matters. 
+- Docx conversion does not give the page number where a sensitive or private information is found. So it is a little course-grained.
 
 ##Authors
 - Birhanu Eshete - birhanu.mekuria(at)gmail.com
