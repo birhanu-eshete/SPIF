@@ -1,6 +1,6 @@
 #SPIF-Sensitive and Private Information Filterer
 
-![alt text](https://github.com/birhanum/spif/blob/master/logos/logo01.PNG "")
+![alt text](http://dl.dropbox.com/u/43653358/logo01.PNG "")
 
 A tool for filtering open data for private/sensitive information before publication
 
