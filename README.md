@@ -29,6 +29,7 @@ Filters:
 - Python 2.7 - http://www.python.org/
 - OpenPyXL library - http://packages.python.org/openpyxl/
 - PyPDF - http://pybrary.net/pyPdf/
+- pmw  -http://sourceforge.net/projects/pmw/files/Pmw/ (This is mandatory to run the GUI version)
 
 ##Operating System
 This script is indepent of the host platform (Windows, Linux or MacOS). All it needs is a Python interpretor.
@@ -37,13 +38,14 @@ We tested this script on:
 - Ubuntu 12.10 LTS 
 
 ##Usage
-
+- Command Line Mode
 <code>python spif.py filename.ext</code>
-
+-GUI Mode
+ <code>python main.py </code>
 ##Known issues
 
-Not all pdf files are supported by PyPdf library, don't get surprise if the script is selective on pdf files. 
-Docx conversion don't return the page number where a sensitive or private information is found.
+Not all pdf files are supported by PyPdf library, do not get surprised if the script is selective on pdf files as the conversion scheme matters. 
+Docx conversion does not give the page number where a sensitive or private information is found. So it is a little course-grained.
 
 ##Authors
 - Birhanu Eshete - birhanu.mekuria(at)gmail.com
