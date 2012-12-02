@@ -1,3 +1,5 @@
-WorksheetName		Cell		Value				What
--------------		----		-----				----
-Temp dump 		B2 		123-45-6789 				Social Security Number
+Line #		Value				What
+------		-----				----
+54 		3456-3434-2222-1111 				Credit Card Number
+68 		49-234-2321-111 				Telephone Number
+114 		1234-1234-1233-3222 				Credit Card Number

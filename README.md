@@ -1,4 +1,4 @@
-#SPIF-Sensitive and Private Information Filterer
+#SPIF - Sensitive and Private Information Filter
 
 ![alt text](http://dl.dropbox.com/u/43653358/logo01.PNG "")
 
@@ -16,13 +16,13 @@ Supports:
 - text files, CSV
 - XLS, XLSX, DOCX
 - XML, HTML
-- PDFs
+- PDF
 
 Filters:
 - Social Security Number
 - Credit Cards Number
-- Telephone Numbers
-- Bank Account Numbers
+- Telephone Number
+- Bank Account Number
 
 ##Requirements/Dependencies
 
@@ -31,7 +31,7 @@ Filters:
 - PyPDF - http://pybrary.net/pyPdf/
 
 ##Operating System
-This script is indepent from the host platform (Windows, Linux or MacOS)
+This script is indepent of the host platform (Windows, Linux or MacOS). All it needs is a Python interpretor.
 We tested this script on:
 - MacOs 10.6.4 
 - Ubuntu 12.10 LTS 
@@ -51,5 +51,5 @@ Docx conversion don't return the page number where a sensitive or private inform
 - Michele Fogarolli - michelefoga(at)gmail.com
 
 ##License 
-This code is under [MIT License](http://opensource.org/licenses/MIT)
+This code is released under the [MIT License](http://opensource.org/licenses/MIT)
 
