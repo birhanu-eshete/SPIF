@@ -1,6 +1,6 @@
 #SPIF-Sensitive and Private Information Filterer
 
-![picture alt](/birhanum/spif/blob/master/logos/logo01.PNG "")  
+![picture alt](/birhanum/spif/logos/logo01.PNG "")  
 
 A tool for filtering open data for private/sensitive information before publication
 
@@ -10,7 +10,7 @@ The problem statement is at - http://www.rhok.org/problems/ffilter-tool-screenin
 
 ##Features
 
-- supports text files, CSV, PDFs, XLS, XLSX, XML, HTML 
+- supports text files, CSV, PDFs, XLS, XLSX, XML, HTML, DOCX
 - filters SSNs - Social Security Number
 - filters CCNs - Credit Cards Number
 - firters Telephone Numbers
