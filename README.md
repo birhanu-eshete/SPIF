@@ -8,13 +8,21 @@ This Tool is developed during the RHoK Global Hackaton in Trento, Italy - Dec 1-
 
 The problem statement is at - http://www.rhok.org/problems/ffilter-tool-screening-open-data-privatesensitive-information-publication
 
+We would like to have your feedback! 
+
 ##Features
 
-- supports text files, CSV, PDFs, XLS, XLSX, XML, HTML, DOCX
-- filters SSNs - Social Security Number
-- filters CCNs - Credit Cards Number
-- firters Telephone Numbers
-- filters Bank Account Numbers
+Supports:
+- text files, CSV
+- XLS, XLSX, DOCX
+- XML, HTML
+- PDFs
+
+Filters:
+- Social Security Number
+- Credit Cards Number
+- Telephone Numbers
+- Bank Account Numbers
 
 ##Requirements/Dependencies
 
@@ -23,10 +31,10 @@ The problem statement is at - http://www.rhok.org/problems/ffilter-tool-screenin
 - PyPDF - http://pybrary.net/pyPdf/
 
 ##Operating System
-
+This script is indepent from the host platform (Windows, Linux or MacOS)
 We tested this script on:
 - MacOs 10.6.4 
-- Ubuntu 12.10 LTS
+- Ubuntu 12.10 LTS 
 
 ##Usage
 
@@ -34,9 +42,14 @@ We tested this script on:
 
 ##Known issues
 
-##Authors
-Birhanu Eshete - birhanu.mekuria(at)gmail.com
-Ali Fawzi Najm Al-Shammari - afnfun(at)yahoo.com 
-Michele Fogarolli - michelefoga(at)gmail.com
+Not all pdf files are supported by PyPdf library, don't get surprise if the script is selective on pdf files. 
+Docx conversion don't return the page number where a sensitive or private information is found.
 
+##Authors
+- Birhanu Eshete - birhanu.mekuria(at)gmail.com
+- Ali Fawzi Najm Al-Shammari - afnfun(at)yahoo.com 
+- Michele Fogarolli - michelefoga(at)gmail.com
+
+##License 
+This code is under [MIT License](http://opensource.org/licenses/MIT)
 
