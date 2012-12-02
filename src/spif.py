@@ -127,9 +127,6 @@ def spif_csv_file(filename):
                 line_number+=1
 
 
-# filter doc files
-def spif_word_doc(filename):
-	print "am doing nothing here"
 
 # filter pdf docs using pyPdf
 def spif_pdf_doc(filename):
@@ -160,10 +157,6 @@ def spif_pdf_doc(filename):
                 page_number+=1
 
 
-# filter xml doc
-def spif_xml_doc(filename):
-	print "am doing nothing here"
-
 
 # check for something like SSN
 def looks_like_ssn(value):
@@ -187,7 +180,7 @@ def looks_like_iban(value):
 	iban_object= iban.IBAN(value)
 	return iban_object.is_valid()
 
-# check for something like phone number
+# check for something like Phone Number
 def looks_like_phone_number(value):
 	phone = re.compile(r'^((\d{1,4}[- ]\d{1,3})|(\d{2,3}))[- ](\d{3,4})[- ](\d{4})')	
 	return phone.match(value) is not None
