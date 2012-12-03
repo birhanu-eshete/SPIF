@@ -53,17 +53,13 @@ def spif_spreadsheet(filename):
 					value=unicode(value)
 				value=value.encode('utf8')
 				if looks_like_ssn(value):
-					type="Social Security Number"
-                                        print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",type
+                                        print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",looks_like(1)
 				if looks_like_ccn(value):
-					type="Credit Card Number"
-                                        print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",type
+                                        print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",looks_like(2)
 				if looks_like_iban(value):
-					print "Bank Account Number"
-					print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",type
+					print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",looks_like(3)
 				if looks_like_phone_number(value):
-					print "Telephone Numbe"
-	                                print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",type
+	                                print  title,"\t\t", row_column,"\t\t",value,"\t\t\t\t",looks_like(4)
 	
 # filter txt files
 def spif_text_file(filename):
@@ -81,17 +77,13 @@ def spif_text_file(filename):
 			value=value.encode('utf8')
 			value=value.strip()
 			if looks_like_ssn(value):
-                                type="Social Security Number"
-                                print line_number,"\t\t",value,"\t\t\t\t",type
+                                print line_number,"\t\t",value,"\t\t\t\t",looks_like(1)
                         if looks_like_ccn(value):
-                                type="Credit Card Number"
-                                print line_number,"\t\t",value,"\t\t\t\t",type
+                                print line_number,"\t\t",value,"\t\t\t\t",looks_like(2)
                         if looks_like_iban(value):
-                                type="Bank Account Number"
-                                print line_number,"\t\t",value,"\t\t\t\t",type
+                                print line_number,"\t\t",value,"\t\t\t\t",looks_like(3)
                         if looks_like_phone_number(value):
-                                type="Telephone Number"
-                                print line_number,"\t\t",value,"\t\t\t\t",type	
+                                print line_number,"\t\t",value,"\t\t\t\t",looks_like(4)	
 		line_number=line_number+1		
 
 # filter csv files
@@ -107,17 +99,13 @@ def spif_csv_file(filename):
                         value=value.encode('utf8')
 			value=value.strip()
                         if looks_like_ssn(value):
-				type="Social Security Number"
-				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",type
+				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",looks_like(1)
 			if looks_like_ccn(value):
-				type="Credit Card Number"
-				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",type
+				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",looks_like(2)
 			if looks_like_iban(value):
-				type="Bank Account Number"
-				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",type
+				print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",looks_like(3)
 			if looks_like_phone_number(value):
-				type="Telephone Number"
-             			print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",type
+             			print line_number,"\t\t",column_number,"\t\t",value,"\t\t\t\t",looks_like(4)
 			column_number+=1
                 line_number+=1
 
@@ -138,19 +126,30 @@ def spif_pdf_doc(filename):
         	for value in currentPage:
                 	value=value.strip()
 			if looks_like_ssn(value):
-                                type="Social Security Number"
-                                print page_number,"\t\t",value,"\t\t\t\t",type
+                                print page_number,"\t\t",value,"\t\t\t\t",looks_like(1)
                         if looks_like_ccn(value):
-                                type="Credit Card Number"
-                                print page_number,"\t\t",value,"\t\t\t\t",type
+                                print page_number,"\t\t",value,"\t\t\t\t",looks_like(2)
                         if looks_like_iban(value):
-                                type="Bank Account Number"
-                                print page_number,"\t\t",value,"\t\t\t\t",type
+                                print page_number,"\t\t",value,"\t\t\t\t",looks_like(3)
                         if looks_like_phone_number(value):
-                                type="Telephone Number"
-                                print page_number,"\t\t",value,"\t\t\t\t",type
+                                print page_number,"\t\t",value,"\t\t\t\t",looks_like(4)
                 page_number+=1
 
+
+
+# get description of sensitive information type
+def looks_like(code):
+	
+		if code==1:
+			return "Social Security Number"
+		elif code==2:
+			return "Credit Card Number"
+		elif code==3:
+			return "Bank Account Number"
+		elif code==4:
+			return "Telephone Number"
+		else:
+			return "I don't know this :-("
 
 
 # check for something like SSN
