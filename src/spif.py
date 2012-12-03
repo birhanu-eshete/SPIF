@@ -1,3 +1,4 @@
+import os
 import sys
 import re
 import pyPdf
@@ -15,22 +16,16 @@ def main():
 	extension=filename.split(".")[-1]
 	if (extension=="xlsx"):
 		spif_spreadsheet(filename)
-	elif (extension=="txt") or(extension=="xml"):
+	elif (extension=="txt") or (extension=="html") or (extension=="xml"):
 		spif_text_file(filename)
-	elif (extension=="doc"):
-		spif_word_doc(filename)
 	elif (extension=="pdf"):
 		spif_pdf_doc(filename)
 	elif (extension=="csv") or (extension=="sql"):
 		spif_csv_file(filename)
-	elif (extension=="docx"):
-		os.system("python docx2txt.py "+filename+" > docx_to_txt.txt")
-		filename=docx_to_txt.txt
+	elif (extension=="docx") or (extension=="doc"):
+		os.system("python docx2txt.py "+filename+" docx_to_txt.txt")
+		filename="docx_to_txt.txt"
 		spif_text_file(filename)
-	elif (extension=="xls"):
-                os.system("python xls2txt.py "+filename+" > xls_to_txt.txt")
-                filename=xls_to_txt.txt
-                spif_text_file(filename)
 	else:
 		spif_unknown_format()
 
@@ -161,7 +156,7 @@ def spif_pdf_doc(filename):
 # check for something like SSN
 def looks_like_ssn(value):
 	ssn=re.compile('\d\d\d-\d\d-\d\d\d\d')
-	return ssn.match(value) is not None
+	return len(re.findall(ssn,value)) >0 
 
 
 # check for something like CCN	
@@ -172,8 +167,7 @@ def looks_like_ccn(value):
 	ccn4=re.compile('\d\d\d\d-\d\d\d\d\d\d-\d\d\d\d\d')
 	ccn5=re.compile('\d\d\d\d \d\d\d\d\d\d \d\d\d\d\d')
 	ccn6=re.compile('\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d')
-	return (ccn1.match(value) is not None) or (ccn2.match(value) is not None) or (ccn3.match(value) is not None) or (ccn4.match(value) is not None) or (ccn5.match(value) is not None) or (ccn6.match(value) is not None)
-
+	return len(re.findall(ccn1,value))>0  or len(re.findall(ccn2,value))>0 or len(re.findall(ccn3,value))>0 or len(re.findall(ccn4,value))>0  or len(re.findall(ccn5,value))>0 or len(re.findall(ccn6,value))>0
 
 # check for something like IBAN
 def looks_like_iban(value):
@@ -183,7 +177,7 @@ def looks_like_iban(value):
 # check for something like Phone Number
 def looks_like_phone_number(value):
 	phone = re.compile(r'^((\d{1,4}[- ]\d{1,3})|(\d{2,3}))[- ](\d{3,4})[- ](\d{4})')	
-	return phone.match(value) is not None
+	return len(re.findall(phone,value))>0 # one or more matches at this place
 	
 # main
 if __name__=='__main__':
