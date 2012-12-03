@@ -29,7 +29,7 @@ Filters:
 - Python 2.7 - http://www.python.org/
 - OpenPyXL library - http://packages.python.org/openpyxl/
 - PyPDF - http://pybrary.net/pyPdf/
-- Python Docx Librart - http://github.com/mikemaccana/python-docx
+- Python Docx Library - http://github.com/mikemaccana/python-docx
 - pmw  - http://sourceforge.net/projects/pmw/files/Pmw/ (mandatory to run the GUI version)
 
 ##Operating Systems
@@ -47,7 +47,7 @@ We tested this script on:
 
 - Not all pdf files are supported by PyPdf library, do not get surprised if the script is selective on pdf files as the conversion scheme matters. 
 - Docx conversion does not give the page number where a sensitive or private information is found. So it is a little course-grained.
-- Depending on what you are scanning, some filters could be noisy or quite useful. For example, a 16 digit flagged as credit card number in a session cookie of an HTML page is useless while the same pattern in a network traffic could be an example of a real credit card number being sent over unencrypted connection.
+- Depending on what you are scanning, some filters could be noisy or quite useful. For example, a 16 digits pattern flagged as credit card number in a session cookie of an HTML page is useless while the same pattern in a network traffic could be an example of a real credit card number being sent over unencrypted connection.
 ##Authors
 - Birhanu Eshete - birhanu.mekuria(at)gmail.com
 - Ali Fawzi Najm Al-Shammari - afnfun(at)yahoo.com 
