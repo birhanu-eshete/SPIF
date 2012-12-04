@@ -43,8 +43,8 @@ We tested this script on:
 	<code>python spif.py filename.ext</code>
 - GUI Mode
  	<code>python main.py </code>
-##Known Issues
 
+##Known Issues
 - Not all pdf files are supported by PyPdf library, do not get surprised if the script is selective on pdf files as the conversion scheme matters. 
 - Docx conversion does not give the page number where a sensitive or private information is found. So it is a little course-grained.
 - Depending on what you are scanning, some filters could be noisy or quite useful. For example, a 16 digits pattern flagged as credit card number in a session cookie of an HTML page is useless while the same pattern in a network traffic could be an example of a real credit card number being sent over unencrypted connection.
